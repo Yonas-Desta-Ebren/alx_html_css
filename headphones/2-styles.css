@@ -1,0 +1,78 @@
+/* Import base styles and variables */
+@import url('1-styles.css');
+
+/* Dark section variant */
+.section-dark {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.section-dark .section-title,
+.section-dark .section-tagline,
+.section-dark .result-text {
+    color: var(--color-white);
+}
+
+/* Results specific styles */
+.result-pentagon {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+    background: var(--color-primary);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.result-pentagon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 101, 101, 0.3);
+}
+
+.result-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.result-percent {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.result-text {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .result-pentagon {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .result-percent {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .result-pentagon {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .result-percent {
+        font-size: 2rem;
+    }
+    
+    .result-text {
+        font-size: 0.75rem;
+    }
+}

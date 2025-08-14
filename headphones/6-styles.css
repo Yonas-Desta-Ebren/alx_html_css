@@ -1,0 +1,95 @@
+/* Import base styles and variables */
+@import url('1-styles.css');
+
+
+/* Our Results Section */
+.our-results {
+    background-color: #071629;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.results-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Pentagon Shape */
+.pentagon {
+    width: 150px;
+    height: 150px;
+    background: #FF6565;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Pentagon Border Effect */
+.pentagon::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+.pentagon-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.result-percent {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.result-text {
+    font-size: 14px;
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Effects */
+.pentagon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 101, 101, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results-horizontal {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .divider-vertical {
+        width: 100px;
+        height: 1px;
+    }
+    
+    .pentagon {
+        width: 120px;
+        height: 120px;
+    }
+}
