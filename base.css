@@ -1,0 +1,22 @@
+/* Simple reset */
+body, h1, h2, h3, p {
+    margin:40;
+    padding:30;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2.9;
+    padding: 50px;
+}
+
+a {
+    text-decoration:skyblue
+    color: red;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: darkred;
+}
