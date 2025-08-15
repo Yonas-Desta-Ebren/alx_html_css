@@ -1,0 +1,88 @@
+/* Import variables from previous task if needed */
+@import url('0-styles.css');
+
+/* What We Do Section */
+.section {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.section-header {
+    max-width: 50rem;
+    margin: 0 auto 4rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-black);
+}
+
+.section-tagline {
+    color: var(--color-black);
+    line-height: 1.6;
+}
+
+/* Services Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.col-1-4 {
+    flex: 0 0 calc(25% - 2rem);
+    max-width: calc(25% - 2rem);
+}
+
+.service {
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-0.5rem);
+}
+
+.icon {
+    font-size: 5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+}
+
+.service-description {
+    color: var(--color-black);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .col-1-4 {
+        flex: 0 0 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .col-1-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .icon {
+        font-size: 4rem;
+    }
+}
